@@ -75,6 +75,23 @@ Installing Extension Manager
 Installing fastfetch
 
 	sudo pacman -S fastfetch
+
+Installing Arch gaming meta
+
+	yay arch gaming meta
+
+Edit pacman.conf for parallel download
+
+	sudo nano /etc/pacman.conf
+
+	uncomment line ParallellDownloads = 5
+
+Install Tools
+
+	yay -S bootles cup protonplus samba
+
+
+
 	
 	
 	
