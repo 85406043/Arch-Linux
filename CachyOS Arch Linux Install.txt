@@ -1,0 +1,82 @@
+Cachyos Kernel | Arch Linux
+
+Repository install
+
+	wget https://mirror.cachyos.org/cachyos-repo.tar.xz
+
+	tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+	
+	sudo ./cachyos-repo.sh
+	
+Installing CachyOS pacman
+	sudo pacman -S yay
+	yay pacman (Search for cachyos/pacman), and install.
+
+Adding Chaotic AUR repo
+
+   Enter a terminal(su)
+   
+	pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+	pacman-key --lsign-key 3056513887B78AEB
+	pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+	pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+
+Install Gedit(for easy editing)optional
+
+	sudo pacman -S gedit
+	
+Editing pacman.conf(su)
+
+	sudo nano /etc/pacman.conf
+	
+	[chaotic-aur]
+	Include = /etc/pacman.d/chaotic-mirrorlist
+	
+	sudo pacman -Sy
+	
+	sudo pacman -S cachyos-kernel-manager
+	
+Check support CPU
+	
+	/lib/ld-linux-x86-64.so.2 --help | grep supported
+	
+	sudo pacman -S gnome-terminal
+	
+	Open CachyOS Kernel Manager, and select kernel.
+	
+	Execute.
+	
+	exit #su
+	
+Installing CachyOS NVidia drivers and headers
+
+	sudo pacman -S linux-cachyos-headers linux-cachyos-nvidia-open nvidia-utils lib32-nvidia-utils nvidia-settings
+	
+Running reflector again
+	
+	sudo pacman -S reflector
+	
+	sudo reflector --sort rate --latest 20 --protocol https --save /etc/pacman.d/mirrorlist
+	
+Installing update-grub
+	
+	yay update-grub(choose the option chaotic-aur/update-grub)
+	
+	sudo update-grub 
+	
+Installing CachyosOS Settings
+
+	sudo pacman -S cachyos-settings
+	
+Installing Extension Manager
+
+	sudo pacman -S extension-manager
+
+Installing fastfetch
+
+	sudo pacman -S fastfetch
+	
+	
+	
+	
+
