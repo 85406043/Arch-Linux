@@ -90,6 +90,10 @@ Install Tools
 
 	yay -S bootles cup protonplus samba
 
+Install Heroic
+
+	yay heroic game launcher
+
 
 
 	
