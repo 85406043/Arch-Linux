@@ -7,6 +7,13 @@ Repository install
 	tar xvf cachyos-repo.tar.xz && cd cachyos-repo
 	
 	sudo ./cachyos-repo.sh
+
+	>>If you do not support V3, add the repository manually to the file<<
+		sudo nano /etc/pacman.conf
+			[cachyos]
+			Include = /etc/pacman.d/cachyos-mirrorlist
+
+	sudo pacman -Sy
 	
 Installing CachyOS pacman
 	sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
@@ -75,6 +82,9 @@ Installing Extension Manager
 Installing fastfetch
 
 	sudo pacman -S fastfetch
+
+REBOOT
+
 
 Installing Arch gaming meta
 
