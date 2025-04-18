@@ -43,7 +43,7 @@ Editing pacman.conf(su)
 	
 	sudo pacman -S cachyos-kernel-manager
 	
-Check support CPU
+Check support CPU and install Kernel
 	
 	/lib/ld-linux-x86-64.so.2 --help | grep supported
 	
