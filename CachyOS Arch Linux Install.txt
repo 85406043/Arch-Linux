@@ -1,6 +1,6 @@
 Cachyos Kernel | Arch Linux
 
-Repository install
+#Repository install
 
 	wget https://mirror.cachyos.org/cachyos-repo.tar.xz
 
@@ -15,11 +15,11 @@ Repository install
 
 	sudo pacman -Sy
 	
-Installing CachyOS pacman
+#Installing CachyOS pacman
 	sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 	yay pacman (Search for cachyos/pacman), and install.
 
-Adding Chaotic AUR repo
+#Adding Chaotic AUR repository
 
    Enter a terminal(su)
    
@@ -28,11 +28,11 @@ Adding Chaotic AUR repo
 	pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
 	pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
-Install Gedit(for easy editing)optional
+#Install Gedit(for easy editing)optional
 
 	sudo pacman -S gedit
 	
-Editing pacman.conf(su)
+#Editing pacman.conf(su)
 
 	sudo nano /etc/pacman.conf
 	
@@ -43,7 +43,7 @@ Editing pacman.conf(su)
 	
 	sudo pacman -S cachyos-kernel-manager
 	
-Check support CPU and install Kernel
+#Check support CPU and install Kernel
 	
 	/lib/ld-linux-x86-64.so.2 --help | grep supported
 	
@@ -55,52 +55,52 @@ Check support CPU and install Kernel
 	
 	exit #su
 	
-Installing CachyOS NVidia drivers and headers
+#Installing CachyOS NVidia drivers and headers
 
 	sudo pacman -S linux-cachyos-headers linux-cachyos-nvidia-open nvidia-utils lib32-nvidia-utils nvidia-settings
 	
-Running reflector again
+#Running reflector again
 	
 	sudo pacman -S reflector
 	
 	sudo reflector --sort rate --latest 20 --protocol https --save /etc/pacman.d/mirrorlist
 	
-Installing update-grub
+#Installing update-grub
 	
 	yay update-grub(choose the option chaotic-aur/update-grub)
 	
 	sudo update-grub 
 	
-Installing CachyosOS Settings
+#Installing CachyosOS Settings
 
 	sudo pacman -S cachyos-settings
 	
-Installing Extension Manager
+#Installing Extension Manager
 
 	sudo pacman -S extension-manager
 
-Installing fastfetch
+#Installing fastfetch
 
 	sudo pacman -S fastfetch
 
 REBOOT
 
 
-Installing Arch gaming meta
+#Installing Arch gaming meta
 
 	yay arch gaming meta
 
-Edit pacman.conf for parallel download
+#Edit pacman.conf for parallel download
 
 	sudo nano /etc/pacman.conf
 
 	uncomment line ParallellDownloads = 5
 
-Install Tools
+#Install Tools
 
 	yay -S bootles cup protonplus samba
 
-Install Heroic
+#Install Heroic
 
 	yay heroic game launcher
 
