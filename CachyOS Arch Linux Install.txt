@@ -87,6 +87,12 @@ Cachyos Kernel | Arch Linux
 
 REBOOT
 
+#Install repository multilib
+
+	#Uncomment line multilib repository
+
+		sudo nano /etc/pacman.conf
+		
 
 #Installing Arch gaming meta
 
