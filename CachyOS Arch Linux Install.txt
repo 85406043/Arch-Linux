@@ -1,129 +1,133 @@
-Cachyos Kernel | Arch Linux
+Cachyos Kernel | Arch Linux Gaming
 
-#Repository install
-
-	wget https://mirror.cachyos.org/cachyos-repo.tar.xz
-
-	tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+#Step 1.
+	> Repository install:
 	
-	sudo ./cachyos-repo.sh
-
-	>>If you do not support V3, add the repository manually to the file<< 
-		Check compatibility >> '/lib/ld-linux-x86-64.so.2 --help | grep supported'
-
-		sudo nano /etc/pacman.conf
-			[cachyos]
-			Include = /etc/pacman.d/cachyos-mirrorlist
-
-	sudo pacman -Sy
-
+		wget https://mirror.cachyos.org/cachyos-repo.tar.xz
 	
-#Installing CachyOS pacman:
-
-	sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-	yay pacman (Search for cachyos/pacman), and install.
-
-
-#Adding Chaotic AUR repository
-
-   Enter a terminal(su):
-	pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
-	pacman-key --lsign-key 3056513887B78AEB
-	pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
-	pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-
-
-#Install Gedit(for easy editing)optional
-
-	sudo pacman -S gedit
-
+		tar xvf cachyos-repo.tar.xz && cd cachyos-repo
+		
+		sudo ./cachyos-repo.sh
 	
-#Editing pacman.conf(su)
-
-	sudo nano /etc/pacman.conf
+		>>If you do not support V3, add the repository manually to the file<< 
+			Check compatibility >> '/lib/ld-linux-x86-64.so.2 --help | grep supported'
 	
-	[chaotic-aur]
-	Include = /etc/pacman.d/chaotic-mirrorlist
+			sudo nano /etc/pacman.conf
+				[cachyos]
+				Include = /etc/pacman.d/cachyos-mirrorlist
 	
-	sudo pacman -Sy
+		sudo pacman -Sy
+
+
+#Step 2.
+	> Installing CachyOS pacman:
 	
-	sudo pacman -S cachyos-kernel-manager
+		sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+		yay pacman (Search for cachyos/pacman), and install.
 
+
+#Step 3.
+	> Adding Chaotic AUR repository:
 	
-#Check support CPU and install Kernel
+	   Enter a terminal(su):
+		pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+		pacman-key --lsign-key 3056513887B78AEB
+		pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+		pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+
+
+#Step 4.(optional)
+	> Install Gedit(for easy editing):
 	
-	/lib/ld-linux-x86-64.so.2 --help | grep supported
+		sudo pacman -S gedit
+
+#Step 7.
+	> Editing pacman.conf(su):
 	
-	sudo pacman -S gnome-terminal
-	
-	Open CachyOS Kernel Manager, and select kernel.
-	
-	Execute.
-	
-	exit #su
-
-	
-#Installing CachyOS NVidia drivers and headers
-
-	sudo pacman -S linux-cachyos-headers linux-cachyos-nvidia-open nvidia-utils lib32-nvidia-utils nvidia-settings
-
-	
-#Running reflector again
-	
-	sudo pacman -S reflector
-
-	sudo reflector --sort rate --latest 20 --protocol https --save /etc/pacman.d/mirrorlist
-
-	
-#Installing update-grub
-	
-	yay update-grub(choose the option chaotic-aur/update-grub)
-	
-	sudo update-grub 
-
-	
-#Installing CachyosOS Settings
-
-	sudo pacman -S cachyos-settings
-
-	
-#Installing Extension Manager
-
-	sudo pacman -S extension-manager
-
-
-#Installing fastfetch
-
-	sudo pacman -S fastfetch
-
-
->> REBOOT <<
-
-
-#Install repository multilib
-
-	#Uncomment line multilib repository
-
 		sudo nano /etc/pacman.conf
 		
-
-#Installing Arch gaming meta
-
-	yay arch gaming meta
-
-
-#Edit pacman.conf for parallel download
-
-	sudo nano /etc/pacman.conf
-
-	uncomment line ParallellDownloads = 5
-
-
-#Install Tools
-
-	yay -S bootles cup protonplus samba
-
-
-#Install Heroic
-
-	yay heroic game launcher
+		[chaotic-aur]
+		Include = /etc/pacman.d/chaotic-mirrorlist
+		
+		sudo pacman -Sy
+		
+		sudo pacman -S cachyos-kernel-manager
+	
+#Step 6.	
+	> Check support CPU and install Kernel:
+		
+		/lib/ld-linux-x86-64.so.2 --help | grep supported
+		
+		sudo pacman -S gnome-terminal
+		
+		Open CachyOS Kernel Manager, and select kernel.
+		
+		Execute.
+		
+		exit #su
+	
+#Step 8.		
+	> Installing CachyOS NVidia drivers and headers:
+	
+		sudo pacman -S linux-cachyos-headers linux-cachyos-nvidia-open nvidia-utils lib32-nvidia-utils nvidia-settings
+	
+#Step 9.		
+	> Running reflector again:
+		
+		sudo pacman -S reflector
+	
+		sudo reflector --sort rate --latest 20 --protocol https --save /etc/pacman.d/mirrorlist
+	
+#Step 10.	
+	> Installing update-grub:
+		
+		yay update-grub(choose the option chaotic-aur/update-grub)
+		
+		sudo update-grub 
+	
+#Step 11.		
+	> Installing CachyosOS Settings:
+	
+		sudo pacman -S cachyos-settings
+	
+#Step 12.		
+	> Installing Extension Manager:
+	
+		sudo pacman -S extension-manager
+	
+#Step 13.	
+	> Installing fastfetch:
+	
+		sudo pacman -S fastfetch
+	
+	
+	>> REBOOT <<
+	
+#Step 14.	
+	> Install repository multilib:
+	
+		#Uncomment line multilib repository
+	
+			sudo nano /etc/pacman.conf
+			
+#Step 15.	
+	> Installing Arch gaming meta:
+	
+		yay arch gaming meta
+	
+#Step 16.	
+	> Edit pacman.conf for parallel download:
+	
+		sudo nano /etc/pacman.conf
+	
+		uncomment line ParallellDownloads = 10
+	
+#Step 17.	
+	> Install Tools:
+	
+		yay -S bootles cup protonplus samba
+	
+#Step 18.	
+	> Install Heroic:
+	
+		yay heroic game launcher
