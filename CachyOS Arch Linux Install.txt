@@ -8,7 +8,9 @@ Cachyos Kernel | Arch Linux
 	
 	sudo ./cachyos-repo.sh
 
-	>>If you do not support V3, add the repository manually to the file<<
+	>>If you do not support V3, add the repository manually to the file<< 
+		Check compatibility >> '/lib/ld-linux-x86-64.so.2 --help | grep supported'
+
 		sudo nano /etc/pacman.conf
 			[cachyos]
 			Include = /etc/pacman.d/cachyos-mirrorlist
