@@ -9,7 +9,7 @@ Repository install
 	sudo ./cachyos-repo.sh
 	
 Installing CachyOS pacman
-	sudo pacman -S yay
+	sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 	yay pacman (Search for cachyos/pacman), and install.
 
 Adding Chaotic AUR repo
