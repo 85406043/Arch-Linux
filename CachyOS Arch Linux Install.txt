@@ -105,11 +105,3 @@ REBOOT
 #Install Heroic
 
 	yay heroic game launcher
-
-
-
-	
-	
-	
-	
-
