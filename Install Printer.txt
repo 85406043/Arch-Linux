@@ -50,3 +50,6 @@ Install Epson Printer | Arch Linux and Other distros
 
 
 #REBOOT and test.
+
+#Manjaro Guide
+	https://wiki.manjaro.org/index.php/Printing
