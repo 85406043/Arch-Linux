@@ -1,0 +1,49 @@
+Install Epson Printer | Arch Linux and Other distros
+
+
+
+	Step 1.
+
+		#Install cups 
+		
+			sudo pacman -S cups
+			
+			
+		
+	Step 2.
+		
+		#Install extensions and Driver
+		
+			sudo pacman -S system-config-printer ipp-usb sane sane-airscan
+			
+			
+					#Driver Epson
+			
+		#You can use either pamac, yay; or whatever you prefer, like package manager.
+		
+			yay -S epson-inkjet-printer-escpr
+			
+					OR
+					
+			yay -S epson-inkjet-printer-escpr2
+			
+			
+	
+	Step 3.
+	
+		#Enable and run the services
+		
+			sudo systemctl enable cups-lpd.socket cups.path cups.service cups.socket 
+			
+			sudo systemctl enable --now saned.socket ipp-usb.service
+		
+		
+		#Start services	
+			
+			sudo systemctl start cups-lpd.socket cups.path cups.service cups.socket saned.socket ipp-usb.service		
+			
+			
+		#Status services, check if all services are running
+		
+			sudo systemctl status cups-lpd.socket cups.path cups.service cups.socket saned.socket ipp-usb.service
+			
