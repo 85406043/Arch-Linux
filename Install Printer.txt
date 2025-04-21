@@ -46,4 +46,7 @@ Install Epson Printer | Arch Linux and Other distros
 		#Status services, check if all services are running
 		
 			sudo systemctl status cups-lpd.socket cups.path cups.service cups.socket saned.socket ipp-usb.service
-			
+
+
+
+#REBOOT and test.
