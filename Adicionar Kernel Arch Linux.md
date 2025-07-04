@@ -24,12 +24,12 @@
         initrd  /initramfs-linux-zen.img = altera de acordo com o kernel
         options root=PARTUUID= aqui adiciona o id do unidade de armazenamento
         
-COPIA E COLA:
+        #COPIA E COLA:
 
-        title   (Personalizado)
-        linux   /
-        initrd  /
-        options root=PARTUUID= 
+                title   (Personalizado)
+                linux   /
+                initrd  /
+                options root=PARTUUID= 
         
     2. CONFIGURAR O LINUX E O INITRD DO ARQUIVO .CONF:
         
