@@ -13,7 +13,7 @@
 
         sudo touch /boot/loader/entries/linux-zen.conf
         
-COPIE A ESTRUTURA 
+COPIE A ESTRUTURA:
 
         title   (Personalizado)
         linux   /
