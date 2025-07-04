@@ -59,8 +59,8 @@ COPIE A ESTRUTURA:
         timeout 3
         editor no
     
-        #Esse tutorial foi feito no systemd-boot, caso for feito no grub, precisa atualizar
-        a inicialização do grub.
+        #Esse tutorial foi feito no systemd-boot, caso for feito no grub, precisa somente atualizar
+        a inicialização do grub. E ele irá reconhecer o kernel instalado. Sem a necessidade de configuração do arquivo EFI.
         
             sudo grub-mkconfig -o /boot/grub/grub.cfg
 
