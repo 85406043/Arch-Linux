@@ -12,6 +12,13 @@
 3 - CRIAR UM ARQUIVO DE CONFIGURAÇÃO EFI NO DIRETORIO:
 
         sudo touch /boot/loader/entries/linux-zen.conf
+        
+COPIE A ESTRUTURA 
+
+        title   (Personalizado)
+        linux   /
+        initrd  /
+        options root=PARTUUID= 
     
 4 - CONFIGURAR O LINUX-ZEN.CONF:
 
@@ -23,13 +30,6 @@
         linux   /vmlinuz-linux-zen = altera de acordo com o kernel
         initrd  /initramfs-linux-zen.img = altera de acordo com o kernel
         options root=PARTUUID= aqui adiciona o id do unidade de armazenamento
-        
-        #COPIA E COLA:
-
-                title   (Personalizado)
-                linux   /
-                initrd  /
-                options root=PARTUUID= 
         
     2. CONFIGURAR O LINUX E O INITRD DO ARQUIVO .CONF:
         
